@@ -10,6 +10,7 @@
             <MovieList 
             :movies="movies" 
             @onToggle="onToggleHandler"
+            @onRemove = "onOnRemoveHandler"
             />
             <MovieAddForm @createMovie="createMovie" />
         </div>
@@ -85,6 +86,9 @@ export default {
 				return item
 			})
 		},
+        onOnRemoveHandler(id){
+            this.movies = this.movies.filter(c => c.id !== id)
+        }
     
     }
 }

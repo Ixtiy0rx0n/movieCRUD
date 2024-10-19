@@ -12,7 +12,7 @@
 
                 <button type="button" 
                 class="btn-trash btn-sm"
-                @click="$emit('onTrash', movie.id)"
+                @click="$emit('onRemove', movie.id)"
                 >
                     <i class="fas fa-trash"></i>
                 </button>   

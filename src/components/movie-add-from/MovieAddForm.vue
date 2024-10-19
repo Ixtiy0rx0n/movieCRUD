@@ -27,6 +27,7 @@ export default {
     },
     methods: {
         addMovie() {
+            if(!this.name || !this.view) return null
             const newMovie = {
                 name: this.name,
                 view: this.view,
